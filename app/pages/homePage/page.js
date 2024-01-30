@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({ subsets: ["latin"] });
 import "tailwindcss/tailwind.css";
 import Header from "@/app/components/header.js";
 import Logos from "@/app/components/logo";
+const montserrat = Montserrat({ subsets: ["latin"] });
 
-export default function Page() {
+export default function Hero() {
   return (
     <>
       {/*พี่บูม*/}
