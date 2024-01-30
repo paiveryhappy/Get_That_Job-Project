@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 import "tailwindcss/tailwind.css";
 import Header from "../components/header.js";
+import Logos from "../components/logo.js";
 
 export default function Page() {
   return (
