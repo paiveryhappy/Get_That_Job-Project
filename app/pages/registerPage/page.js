@@ -32,7 +32,7 @@ export default function RegisterPage() {
               className="absolute top-1 left-0"
             />
           </div>
-          <div className="secound-status ml-[10px] relative pl-[45px]">
+          <div className="secound-status ml-[10px] relative pl-[45px] text-[#bdbdbd]">
             <p className="text-[10px]">IN PROGRESS</p>
             <p className="text-[18px]">Personal</p>
             <p className="text-[18px]">information</p>
@@ -44,7 +44,7 @@ export default function RegisterPage() {
               alt="number2 "
             />
           </div>
-          <div className="thrid-status ml-[10px] relative pl-[45px]">
+          <div className="thrid-status ml-[10px] relative pl-[45px] text-[#bdbdbd]">
             <p className="text-[10px]">IN PROGRESS</p>
             <p className="text-[18px]">Professional</p>
             <p className="text-[18px]">information</p>
