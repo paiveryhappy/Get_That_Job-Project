@@ -8,7 +8,7 @@ export default function RegisterPage2() {
   return (
     <>
       <Header />
-      <div className="wrapper ml-[400px] mb-[100px] relative mt-8">
+      <div className="wrapper ml-[400px] mb-[100px] relative mt-8 ">
         <h1 className="text-[48px] mb-4 " style={montserrat.style}>
           Good choice!
         </h1>
@@ -180,7 +180,7 @@ export default function RegisterPage2() {
           width={400}
           height={400}
           alt="woman"
-          className="absolute right-[200px] top-[315px]"
+          className="absolute ml-[500px] top-[315px]"
         />
       </div>
     </>
