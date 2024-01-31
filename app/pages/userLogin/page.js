@@ -10,7 +10,7 @@ import Link from "next/link";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const inter = Inter({ weight: "400", preload: false });
 
-function Page() {
+function LoginPage() {
   return (
     <div className="flex w-full justify-around items-start bg-[#F5F5F6] p-10">
       <form style={montserrat.style} className="ml-52">
@@ -72,4 +72,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default LoginPage;

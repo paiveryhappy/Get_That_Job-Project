@@ -1,13 +1,13 @@
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
-import Header from "@/app/components/header";
+import Header from "@/app/components/Header";
 
 export default function RegisterPage() {
   return (
     <>
       <Header />
       <div className="wrapper ml-[400px] mb-[100px] relative">
-        <h1 className="text-[48px] mb-4">Good choice!</h1>
+        <h1 className="text-[48px] mb-4">Good choice! </h1>
         <h2 className="text-[20px] mb-8">Create a new account as...</h2>
         <div className="status-user text-[14px] flex gap-[6px] mb-[36px]">
           <div className="mr-1">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
-import Header from "@/app/components/header";
+import Header from "@/app/components/Header";
 import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 

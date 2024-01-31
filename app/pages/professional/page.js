@@ -184,7 +184,7 @@ export default function Page() {
               </div>
               <div className="w-[419.93px] h-[52px] left-0 top-0 absolute flex-col justify-start items-start gap-1 inline-flex ">
                 <div
-                  className="text-zinc-600 text-[10px] uppercase tracking-wider relative top-[3px] tracking-[.10em]"
+                  className="text-zinc-600 text-[10px] uppercase tracking-wider relative top-[3px]"
                   style={inter.style}
                 >
                   search by job title or company name

@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 
-export default function Logos() {
+export default function Icons() {
   return (
     <div className="flex flex-row justify-items-center ">
       <img
