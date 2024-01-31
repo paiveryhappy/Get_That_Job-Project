@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export default function Page() {
   return (
     <div className="w-full h-screen bg-neutral-100 justify-center items-start inline-flex">
-      <div className="self-stretch py-8 bg-neutral-200 flex-col justify-between items-start inline-flex p">
+      <div className="self-stretch py-8 bg-neutral-200 flex-col justify-between items-start inline-flex">
         <div className="flex-col justify-start items-start flex">
           <div className="px-4 pb-[32px] flex-col justify-center items-start flex">
             <img className="w-[136px] h-10" src="/images/gtj-logo.png" />
@@ -17,32 +17,26 @@ export default function Page() {
           <div className="w-60 h-10 px-4 p-[26px] gap-2 bg-neutral-100 justify-center items-center flex">
             <img className="w-[24px] h-[24px]" src="/images/serach.png" />
             <div
-              className="grow shrink basis-0 text-neutral-700 leading-normal"
+              className="grow text-neutral-700 leading-normal"
               style={inter.style}
             >
               Find that job
             </div>
           </div>
           <div className="w-60 h-10 px-4 p-[26px] gap-2 bg-neutral-200 justify-center items-center flex">
-            <div className="w-6 h-6 justify-center items-center flex">
-              <img
-                className="w-[24px] h-[24px]"
-                src="/images/your applications.png"
-              />
-              <div className="w-6 h-6 relative"></div>
-            </div>
+            <img
+              className="w-[24px] h-[24px]"
+              src="/images/your applications.png"
+            />
             <div
-              className="grow shrink basis-0 text-zinc-600 leading-normal"
+              className="grow text-zinc-600 leading-normal"
               style={inter.style}
             >
               Your applications
             </div>
           </div>
           <div className="w-60 h-10 px-4 p-[26px] gap-2 bg-neutral-200 justify-center items-center flex">
-            <div className="w-6 h-6 justify-center items-center flex">
-              <img className="w-[24px] h-[24px]" src="/images/following.png" />
-              <div className="w-6 h-6 relative"></div>
-            </div>
+            <img className="w-[24px] h-[24px]" src="/images/following.png" />
             <div
               className="grow shrink basis-0 text-zinc-600 leading-normal"
               style={inter.style}
@@ -51,43 +45,32 @@ export default function Page() {
             </div>
           </div>
           <div className="w-60 h-10 px-4 p-[26px] gap-2 bg-neutral-200 justify-center items-center flex">
-            <div className="w-6 h-6 justify-center items-center flex">
-              <img className="w-[24px] h-[24px]" src="/images/profile.png" />
-              <div className="w-6 h-6 relative"></div>
-            </div>
+            <img className="w-[24px] h-[24px]" src="/images/profile.png" />
             <div
-              className="grow shrink basis-0 text-zinc-600 leading-normal"
+              className="grow text-zinc-600 leading-normal"
               style={inter.style}
             >
               Profile
             </div>
           </div>
           <div className="w-60 px-4 py-3 bg-neutral-200 justify-start items-start gap-2 inline-flex">
-            <div className="w-6 h-6 justify-center items-center flex">
-              <img className="w-[24px] h-[24px]" src="/images/logout.png" />
-              <div className="w-6 h-6 relative"></div>
-            </div>
-            <div
-              className="grow shrink basis-0 text-zinc-600 leading-normal"
-              style={inter.style}
-            >
+            <img className="w-[24px] h-[24px]" src="/images/logout.png" />
+            <div className=" text-zinc-600 leading-normal" style={inter.style}>
               Log out
             </div>
           </div>
         </div>
-        <div className="w-60 px-4 bg-neutral-200 justify-start items-start gap-2.5 inline-flex">
-          <div className="flex-col justify-start items-start gap-3 inline-flex">
-            <div
-              className="text-zinc-600 text-xs leading-none"
-              style={montserrat.style}
-            >
-              © 202X - Get That Job
-            </div>
+        <div className="flex-col justify-start items-start gap-3 inline-flex w-60 px-4">
+          <div
+            className="text-zinc-600 text-xs leading-none"
+            style={montserrat.style}
+          >
+            © 202X - Get That Job
           </div>
         </div>
       </div>
-      <div className="grow shrink self-stretch px-[120px] pb-[667px] bg-neutral-100 justify-center items-center inline-flex">
-        <div className="self-stretch py-8 flex-col w-[960px] justify-start items-start gap-2.5 inline-flex">
+      <div className="grow self-stretch px-[120px] pb-[667px] bg-neutral-100 justify-center items-center inline-flex">
+        <div className="self-stretch flex-col h-[169px] w-[960px] justify-start items-start gap-4 inline-flex relative right-6 py-8">
           <div className="h-[169px] flex-col justify-start items-start gap-4 flex relative right-6">
             <div
               className="self-stretch text-neutral-700 text-[34px] tracking-tight"
@@ -122,13 +105,8 @@ export default function Page() {
                       Programmer
                     </option>
                   </select>
-                  <div className="flex-col justify-start items-start gap-1 inline-flex">
-                    <div className="w-5 h-5 justify-center items-center flex">
-                      <div className="w-5 h-5 relative"></div>
-                    </div>
-                  </div>
                 </div>
-                <div className="flex-col justify-start items-start gap-1 inline-flex">
+                <div className="flex-col justify-start items-start gap-1 inline-flex ">
                   <div
                     className="text-zinc-600 text-[10px] uppercase relative top-[3px] tracking-[.10em]"
                     style={inter.style}
@@ -153,26 +131,19 @@ export default function Page() {
                       Programmer
                     </option>
                   </select>
-                  <div className="flex-col justify-start items-start gap-1 inline-flex">
-                    <div className="w-5 h-5 justify-center items-center flex">
-                      <div className="w-5 h-5 relative"></div>
-                    </div>
-                  </div>
                 </div>
-                <div className="flex-col justify-start items-start gap-1 inline-flex">
+                <div className="flex-col justify-start items-start gap-1 inline-flex ">
                   <div
                     className="text-zinc-600 text-[10px] uppercase tracking-wider"
                     style={inter.style}
                   >
                     Salary Range
                   </div>
-                  <div className="justify-start items-center gap-2 inline-flex">
-                    <div className="h-9 p-2 bg-white rounded-lg border-2 border-rose-300 justify-start items-center gap-2 flex">
-                      <div className="w-5 h-5 justify-center items-center flex">
-                        <div className="w-5 h-5 relative"></div>
-                      </div>
+                  <div className="justify-start items-center gap-2 inline-flex ">
+                    <div className="h-9 p-2 bg-white rounded-lg border-2 border-rose-300 justify-start items-center gap-2 flex ">
+                      <div className="w-5 h-5 justify-center items-center flex relative "></div>
                       <div
-                        className="grow shrink basis-0 h-5 text-neutral-400 text-sm leading-tight tracking-tight"
+                        className=" h-5 text-neutral-400 text-sm leading-tight tracking-tight"
                         style={inter.style}
                       >
                         <img
@@ -188,13 +159,11 @@ export default function Page() {
                         />
                       </div>
                     </div>
-                    <div className="w-[15px] h-[0px] rounded-lg border-2 border-neutral-400"></div>
-                    <div className="h-9 p-2 bg-white rounded-lg border-2 border-rose-300 justify-start items-center gap-2 flex">
-                      <div className="w-5 h-5 justify-center items-center flex">
-                        <div className="w-5 h-5 relative"></div>
-                      </div>
+                    <div className="w-[15px] h-[0px] rounded-lg border-2 border-neutral-400 "></div>
+                    <div className="h-9 p-2 bg-white rounded-lg border-2 border-rose-300 justify-start items-center gap-2 flex ">
+                      <div className="w-5 h-5 justify-center items-center flex "></div>
                       <div
-                        className="grow shrink basis-0 h-5 text-neutral-400 text-sm leading-tight tracking-tight"
+                        className="h-5 text-neutral-400 text-sm leading-tight tracking-tight"
                         style={inter.style}
                       >
                         <img
@@ -213,7 +182,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="w-[419.93px] h-[52px] left-0 top-0 absolute flex-col justify-start items-start gap-1 inline-flex">
+              <div className="w-[419.93px] h-[52px] left-0 top-0 absolute flex-col justify-start items-start gap-1 inline-flex ">
                 <div
                   className="text-zinc-600 text-[10px] uppercase tracking-wider relative top-[3px] tracking-[.10em]"
                   style={inter.style}
@@ -225,7 +194,7 @@ export default function Page() {
                     <div className="w-5 h-5 relative"></div>
                   </div>
                   <div
-                    className="grow shrink basis-0 h-5 text-neutral-400 text-sm leading-tight tracking-tight"
+                    className=" h-5 text-neutral-400 text-sm leading-tight tracking-tight"
                     style={inter.style}
                   >
                     <img
