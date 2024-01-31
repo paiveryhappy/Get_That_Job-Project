@@ -11,15 +11,15 @@ export default function Hero() {
       {/*พี่บูม*/}
       <Header />
       <div className="flex-col  text-center justify-center items-center w-full h-screen bg-[#f7f3f3] mt-3">
-        <div className="text-[61px] p-6" style={montserrat.style}>
+        <h1 className="text-[61px] p-6" style={montserrat.style}>
           The place where <br />
           you get{" "}
           <a style={montserrat.style} className="text-[#F48FB1]">
             that{" "}
           </a>{" "}
           job
-        </div>
-        <div className="my-4" style={montserrat.style}>
+        </h1>
+        <p className="my-4" style={montserrat.style}>
           With our Machine Learning algorithm you will get that job <br />
           in no time. We promise you! Just give us the money and we <br />
           will take care of it.
@@ -30,7 +30,7 @@ export default function Hero() {
           >
             CREATE AN ACCOUNT NOW
           </button>
-        </div>
+        </p>
         <div className="inline-block ">
           <Image src="/images/humen-group.png" width={833} height={833} />
         </div>
