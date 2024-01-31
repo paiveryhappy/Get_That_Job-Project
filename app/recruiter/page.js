@@ -58,7 +58,7 @@ export default function Page() {
         </div>
       </div>
       <div className="grow self-stretch px-[120px] pb-[667px]  bg-neutral-100 justify-center items-center inline-flex">
-        <div className="self-stretch h-[169px] w-[960px] flex-col justify-start items-start gap-4 flex relative right-6 py-8">
+        <div className="self-stretch h-[169px] w-[960px] flex-col justify-start items-start gap-4 flex relative right-12 py-8">
           <div
             className="self-stretch text-neutral-700 text-[34px] tracking-tight "
             style={montserrat.style}
