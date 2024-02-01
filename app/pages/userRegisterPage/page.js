@@ -1,15 +1,34 @@
 "use client";
+
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "@/app/components/Header";
 import { useState } from "react";
+import { supabase } from "@/utils/supabase";
 
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
+    try {
+      const { user, error } = await supabase.from("user").insert([
+        {
+          email,
+          password,
+        },
+      ]);
+      // console.log(email, password);
+
+      if (error) {
+        console.error("Error registering user", error.message);
+        return false;
+      }
+      console.log("User registered successfully:", user);
+    } catch (error) {
+      console.error("Error registering user", error.message);
+    }
   };
 
   return (
@@ -71,16 +90,20 @@ export default function RegisterPage() {
           <input
             className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mt-1"
             type="email"
-            id="email"
-            name="email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
             placeholder="some.user@mail.com"
           />
           <p>PASSWORD</p>
           <input
             className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mt-1"
             type="password"
-            id="password"
-            name="password"
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
           />
           <p>PASSWORD CONFIRMATION</p>
           <input
@@ -93,6 +116,7 @@ export default function RegisterPage() {
         <button
           type="submit"
           className="p-2 w-20 h-10 bg-[#F48FB1] text-white mt-4 ml-auto rounded-2xl text-sm relative "
+          onClick={handleRegister}
         >
           NEXT
           <Image
