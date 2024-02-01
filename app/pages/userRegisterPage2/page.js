@@ -2,6 +2,7 @@ import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "@/app/components/Header";
 import { Montserrat } from "next/font/google";
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function RegisterPage2() {
@@ -94,9 +95,9 @@ export default function RegisterPage2() {
           <p style={montserrat.style}>NAME</p>
           <input
             className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mb-2 mt-1"
-            type="email"
-            id="email"
-            name="email"
+            type="text"
+            id="text"
+            name="name"
             placeholder="John Doe"
             style={montserrat.style}
           />
@@ -104,9 +105,9 @@ export default function RegisterPage2() {
           <p style={montserrat.style}>PHONE</p>
           <input
             className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mt-1"
-            type="password"
-            id="password"
-            name="password"
+            type="number"
+            id="number"
+            name="telephone"
             placeholder="+XXXXXXXX"
             style={montserrat.style}
           />
@@ -122,19 +123,11 @@ export default function RegisterPage2() {
           <div className="flex relative">
             <input
               className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mt-1 "
-              type="password"
-              id="password"
-              name="password"
+              type="date"
+              id="birthdate"
+              name="birthdate"
               placeholder="Pick a date"
               style={montserrat.style}
-            />
-
-            <Image
-              src="/images/calendar-2-line.png"
-              width={10}
-              height={10}
-              alt="arrow"
-              className="w-6 h-6 absolute ml-[315px] mt-2"
             />
           </div>
 
@@ -143,9 +136,9 @@ export default function RegisterPage2() {
           </p>
           <input
             className="w-[350px] h-[36px] rounded-lg text-sm p-2 border border-[#F48FB1] mt-1"
-            type="password"
-            id="password"
-            name="password"
+            type="text"
+            id="url"
+            name="linkedin"
             placeholder="https://www.linkedin.com/in/username"
             style={montserrat.style}
           />
