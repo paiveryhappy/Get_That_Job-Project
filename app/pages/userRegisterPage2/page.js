@@ -1,11 +1,39 @@
+"use client";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "@/app/components/Header";
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
+import { supabase } from "@/utils/supabase";
+import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function RegisterPage2() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+
+  const handleRegister = async (event) => {
+    event.preventDefault();
+    try {
+      const { data, error } = await supabase
+        .from("professional information")
+        .insert([{ name, phone, birthdate, linkedin }]);
+
+      // console.log(name, phone, birthdate, linkedin);
+
+      if (error) {
+        console.error("Error registering user", error.message);
+        return false;
+      }
+      console.log("User registered successfully:", data);
+    } catch (error) {
+      console.error("Error registering user", error.message);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -99,6 +127,10 @@ export default function RegisterPage2() {
             id="text"
             name="name"
             placeholder="John Doe"
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
             style={montserrat.style}
           />
 
@@ -109,6 +141,10 @@ export default function RegisterPage2() {
             id="number"
             name="telephone"
             placeholder="+XXXXXXXX"
+            value={phone}
+            onChange={(event) => {
+              setPhone(event.target.value);
+            }}
             style={montserrat.style}
           />
           <div
@@ -127,6 +163,10 @@ export default function RegisterPage2() {
               id="birthdate"
               name="birthdate"
               placeholder="Pick a date"
+              value={birthdate}
+              onChange={(event) => {
+                setBirthdate(event.target.value);
+              }}
               style={montserrat.style}
             />
           </div>
@@ -140,22 +180,29 @@ export default function RegisterPage2() {
             id="url"
             name="linkedin"
             placeholder="https://www.linkedin.com/in/username"
+            value={linkedin}
+            onChange={(event) => {
+              setLinkedin(event.target.value);
+            }}
             style={montserrat.style}
           />
         </div>
         <div className="w-[350px] flex   items-center justify-center ">
-          <button
-            type="submit"
-            className="p-2 w-[100px] h-10  border border-[#F48FB1] mt-4 mx-2 rounded-2xl text-sm  "
-            style={montserrat.style}
-          >
-            SKIP THIS!
-          </button>
+          <Link href="/pages/userRegisterPage3">
+            <button
+              type="submit"
+              className="p-2 w-[100px] h-10  border border-[#F48FB1] mt-4 mx-2 rounded-2xl text-sm hover:bg-[#FFC1E3]"
+              style={montserrat.style}
+            >
+              SKIP THIS!
+            </button>
+          </Link>
           <button className="p-2 w-[100px] h-10 bg-[#F48FB1] mt-4  rounded-2xl text-sm flex align-middle">
             <a
               type="submit"
               className=" w-[100px] h-10  text-white rounded-2xl text-sm ml-1 "
               style={montserrat.style}
+              onClick={handleRegister}
             >
               NEXT
             </a>
