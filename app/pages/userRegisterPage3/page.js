@@ -6,7 +6,7 @@ export default function RegisterPage() {
   return (
     <>
       <Header />
-      <div className="wrapper ml-[400px] ">
+      <div className="wrapper ml-[400px] relative ">
         <h1 className="text-[48px] mb-4">Good choice!</h1>
         <h2 className="text-[20px] mb-8">Create a new account as...</h2>
         <div className="status-user text-[14px] flex gap-[6px] mb-[36px]">
@@ -157,7 +157,7 @@ export default function RegisterPage() {
           width={400}
           height={400}
           alt="woman"
-          className="absolute right-[200px] top-[500px]"
+          className="absolute ml-[600px] mt-[-400px] "
         />
       </div>
     </>
