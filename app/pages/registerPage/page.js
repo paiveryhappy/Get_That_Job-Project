@@ -1,8 +1,17 @@
+"use client";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "@/app/components/Header";
+import { useState } from "react";
 
 export default function RegisterPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <Header />
